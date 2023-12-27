@@ -4,8 +4,8 @@
 mod layout;
 mod delay;
 
-const NUM_COLS: usize = 10;
-const NUM_ROWS: usize = 4;
+const NUM_COLS: usize = 12;
+const NUM_ROWS: usize = 5;
 const NUM_LAYERS: usize = 1;
 
 pub struct Graphics{
@@ -181,12 +181,15 @@ mod app {
                 pins.gpio2.into_pull_up_input().into(),
                 pins.gpio1.into_pull_up_input().into(),
                 pins.gpio0.into_pull_up_input().into(),
+                pins.gpio23.into_pull_up_input().into(),
+                pins.gpio24.into_pull_up_input().into(),
             ],
             [
                 pins.gpio5.into_push_pull_output().into(),
                 pins.gpio6.into_push_pull_output().into(),
                 pins.gpio7.into_push_pull_output().into(),
                 pins.gpio8.into_push_pull_output().into(),
+                pins.gpio9.into_push_pull_output().into(),
             ],
         );
         // let matrix = keyberon::matrix::Matrix::new(
